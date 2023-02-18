@@ -1,0 +1,84 @@
+//import
+@import "../base/variables"; 
+@import "../base/extend";
+@import "../base/mixin";
+
+
+/*estilos del body*/
+
+body{
+    background-color:$color-principal;
+}
+
+/*estilos del header*/
+
+header{    
+    .menu-encabezado{
+        background-color: $color-secundario;
+        padding: 2rem 0;
+        div{
+            a{
+             .img-logo{    
+                margin-left: 1rem; 
+                margin-right: 0.5rem;               
+              }           
+            }
+            div{
+                ul{
+                    li{
+                        .botones{ 
+                                font-size: large;  
+                                margin: 1rem 2rem 1rem 0;
+                                padding: 0;   
+                        }
+                        .botones:hover{
+                                transform: scale(1.1);
+                                box-shadow: 1px 1px 3px black;
+                        }                    
+                    }
+                }
+            }            
+            .navegador-celular{
+                    display: none;    
+            }
+        }  
+    }
+}
+ 
+/*estilos del footer*/
+
+footer{
+    background-color: $color-secundario; 
+    text-align: center; 
+    padding-bottom: 0.5rem;
+    div{
+        .redes-sociales{
+            @include text ($font-secundaria, 1rem, black, center);
+            text-decoration: underline;           
+            padding-top: 0.5rem;
+        }
+       .enlaces{    
+            display: inline-block;    
+            margin: 0.3rem;    
+        } 
+        div{
+           .texto-contacto{    
+                @include text ($font-secundaria, 0.9rem, black, center);  
+                .img-footer{                    
+                    animation-name: animacion-footer;
+                    animation-iteration-count: infinite;    
+                    animation-duration: 5s;
+                    transition: 3s;    
+                }
+                    @keyframes animacion-footer {
+                        0% {
+                            transform: scale(0.6);
+                        }   
+                        100%{
+                            transform: scale(1.0);
+                        }    
+                    }        
+                                }
+        }
+    }             
+}

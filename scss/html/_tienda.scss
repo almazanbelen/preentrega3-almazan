@@ -1,0 +1,54 @@
+//import
+@import "../base/variables"; 
+@import "../base/extend";
+@import "../base/mixin";
+
+/*tienda*/
+main{
+    margin-top: 5rem;
+    .titulos{
+        @include text ($font-secundaria, 2.2rem, $color-terciario, center);
+    }
+    .contain-elements{
+        margin: 6rem;
+        @include grid (28rem 28rem, 5fr 5fr 5fr);
+        gap: 6rem;    
+        justify-content: center;
+        .elements-tienda{    
+            @extend %flex-simple;
+            align-items: center;    
+            @extend %border;
+            transition: 1s;
+            .imagen-tienda{
+                margin: 0.5rem;
+            }
+            form{
+               .carrito{    
+                    border-style: none;
+                    font-family: $font-primaria;
+                    .producto-tienda{
+                        margin: 0.5rem;
+                        text-align: center;
+                    }
+                    .seleccion{
+                        margin-bottom: 0.5rem;
+                        .ui{
+                            width: 1.8rem;
+                            padding: 0.2rem
+                        }
+                        .boton-carrito{
+                            padding: 0.3rem;  
+                            font-family: $font-primaria;
+                            background-color: $color-secundario;
+                            border-radius: 15rem;   
+                        }
+
+                    }
+               }
+            }
+        }
+        .elements-tienda:hover{
+            transform: scale(1.1);
+        }        
+    }
+}   

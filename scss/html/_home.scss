@@ -1,0 +1,23 @@
+//import
+@import "../base/variables"; 
+@import "../base/extend";
+@import "../base/mixin";
+
+
+/*index*/
+
+#bienvenida-index{
+    @include text ($font-primaria, 1.5rem, black, center);
+    margin: 8rem;    
+    .subtitulo-bienvenida{
+        font-weight: bold;    
+        margin-bottom: 4rem;
+    }
+    .parrafo-descripcion{   
+        margin-bottom: 3rem;
+    }
+}
+
+.carrusel{
+    margin: 4rem 4rem 8rem 4rem;
+}

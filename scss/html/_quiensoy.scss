@@ -1,0 +1,86 @@
+//import
+@import "../base/variables"; 
+@import "../base/extend";
+@import "../base/mixin";
+
+/*quien soy*/
+.contain-quiensoy{
+    @include grid (4fr 1.5fr, auto);
+    grid-template-areas:   
+    "quien-soy banner"
+    "mundo-espiritual banner"
+    "proceso-espiritual banner";
+    gap: 2.5rem;
+    margin: 3rem 2rem 0.8rem 2rem;  
+    main{
+       .descricion-quiensoy{ 
+            @include text ($font-primaria, 1.2rem, black, justify);
+            padding-right: 2rem;        
+            .quien-soy{
+                grid-area: quien-soy;
+                margin-bottom: 3rem;
+                .titulo-quiensoy{   
+                    @include text ($font-primaria, 1.4rem, $color-terciario, justify);
+                    font-weight: bold;
+                    margin-bottom: 3rem;
+                }
+            }
+            .mundo-espiritual{
+                grid-area: mundo-espiritual;
+                margin-bottom: 3rem;
+                .titulo-quiensoy{   
+                    @include text ($font-primaria, 1.4rem, $color-terciario, justify);
+                    font-weight: bold;
+                    margin-bottom: 3rem;
+                }
+            }
+            .proceso-espiritual{
+                grid-area: proceso-espiritual;
+                margin-bottom: 0;
+                .titulo-quiensoy{   
+                    @include text ($font-primaria, 1.4rem, $color-terciario, justify);
+                    font-weight: bold;
+                    margin-bottom: 3rem;
+                }   
+            }
+        }
+    } 
+    .banner{
+        height: auto;
+        margin-top: 3rem;
+        margin-bottom: 6rem;
+        background: $color-secundario;
+        color: $color-principal;
+        padding: 1rem;
+        grid-area: banner;
+        @extend %flex-simple;   
+        border: solid 0.1rem gray; 
+        box-shadow: -2px -2px 8px black;  
+        .banner-titulo{
+            @include text ($font-terciaria, 1.5rem, $color-cuaternario, center);       
+            margin-bottom: 2rem;  
+        }
+        .banner-terapia{
+            @include text ($font-terciaria, 1rem, $color-principal, center);
+            margin-bottom: 2rem;
+            background-color: grey;
+            padding: 1rem;
+            box-shadow: 2px 2px 8px black;
+        }
+        .boton-vermas{
+            @include text ($font-terciaria, 1rem, $color-principal, end);
+            text-decoration-color: $color-principal;
+            text-overflow: $color-principal;
+            transition: 0.3s;
+        }
+        .boton-vermas:hover{
+            text-decoration-color: $color-cuaternario;
+            color: $color-cuaternario;
+        }
+        .boton-vermas:active{
+            transform: scale(0.9);
+        }
+    }
+}
+
+

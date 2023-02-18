@@ -1,0 +1,196 @@
+//import
+@import "../base/variables"; 
+@import "../base/extend";
+@import "../base/mixin";
+
+/*medias queries*/
+
+/*pantallas tablet*/
+@media screen and (max-width:768px){
+    /*header*/ 
+    header{
+        .menu-encabezado{
+            div{
+                a{
+                    .img-logo{            
+                        margin: 0;
+                    }                
+                }
+                .navegador-celular{
+                    display: block;            
+                    margin: 0.8rem; 
+                    .boton-menu{            
+                        background-color: $color-secundario;
+                        color: black;
+                        justify-content: end;
+                    }
+     
+          
+                }
+            }
+        }
+    }
+
+    /*terapias*/
+    .contain-terapias{
+        display: block;
+        .descripcion-terapias{
+            .descripcion-mesa{
+                .mesa{
+                    .img-mesa{
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+            .descripcion-pendulo{
+                .img-pendulo{
+                            margin-bottom: 7rem;
+                }
+            }  
+        }
+    }
+
+    /*quien soy*/
+    .contain-quiensoy{
+        display: grid;
+        .banner{
+            height: auto;
+            margin-bottom: 6rem;	   
+        }
+    }
+
+    /*tienda*/
+    main{
+        .contain-elements{
+            @include grid (2fr 2fr, 2fr 2fr 2fr);
+            gap: 3rem;
+            justify-content: center;
+	        .div{
+                form{
+                    .carrito{
+                        .seleccion{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;       
+                            .ui{
+                                margin: 0.3rem; 
+                            }
+                        }
+                    }
+                }
+             }
+            }
+    }
+             
+    /*blog*/
+    main{
+        .contain{
+            display: flex;
+	        .contain-blog{
+                flex-direction: row;
+                justify-content: center;
+                width: 25rem;
+                .link-video{
+                    display: none;
+ 	            }
+            }
+        }
+    }
+}
+
+/*pantallas celular*/
+@media screen and (max-width:480px){
+
+/*header*/
+header{
+    .menu-encabezado{
+        div{
+            a{
+                .img-logo{            
+                    margin: 0;
+                } 
+            }
+        }
+        .navegador-celular{
+            margin: 0;
+	        .boton-menu{
+                background-color: $color-secundario;
+                color: black;
+                font-size: small;
+                padding: 0.1rem; 
+            }
+        }
+    }
+}
+
+/*terapias*/
+.contain-terapias{
+    .descripcion-terapias{
+        .descripcion-runas{
+            .img-runas{
+                display: none;
+            }
+        }
+        .descripcion-mesa{
+            .mesa{
+                .img-mesa{
+                    display: none;
+                }
+            }
+        }
+        .descripcion-bio{
+		    .img-bio{
+                display: none;
+            }
+        }
+        .descripcion-pendulo{
+            .img-pendulo{
+                display: none;
+            }
+        }
+    }
+}
+
+/*quien soy*/
+.contain-quiensoy{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 2rem 3rem 2rem;
+    .banner{
+        display: none;
+    }
+}
+
+ /*tienda*/       
+ main{
+    .contain-elements{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+    }
+ }
+
+ /*blog*/
+main{
+    .contain{
+        .contain.blog{
+            .link-video{
+                display: none;
+            }
+        }
+    }
+}
+}
+
+
+    
+
+
+    
+
+      
+   
+      
+
+
+

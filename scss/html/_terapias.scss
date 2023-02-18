@@ -1,0 +1,86 @@
+//import
+@import "../base/variables"; 
+@import "../base/extend";
+@import "../base/mixin";
+
+/*terapias*/
+.contain-terapias{  
+    .terapias-titulo{
+        @include text ($font-secundaria, 2.2rem, $color-terciario, center);
+    } 
+    .descripcion-terapias{
+        @include flex (6rem);
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+        .descripcion-runas{
+            @extend %pad-wid;
+            @include text ($font-primaria, 1.1rem, $color-terciario,justify);      
+            @extend %border;
+            .nombre{    
+                @include text ($font-secundaria, 2rem, $color-terciario, center);
+                margin-bottom: 2rem;
+            }            
+            .ultimo-parrafo{
+                margin-bottom: 0;
+            }
+            .img-runas{                  
+                transform: translate(8.5rem, -1rem);  
+                @extend %shadow;  
+            }
+        } 
+        .descripcion-mesa{
+            @extend %pad-wid;
+            @include text ($font-primaria, 1.1rem, $color-terciario,justify);    
+            @extend %border;
+            .nombre{    
+                @include text ($font-secundaria, 2rem, $color-terciario, center);
+                margin-bottom: 2rem;
+            }            
+            .ultimo-parrafo{
+                margin-bottom: 0;
+            }
+            .mesa{
+                display: flex;    
+                justify-content: center;
+                .img-mesa{
+                    margin-top: 1rem;
+                    box-shadow: 4px 4px 15px; 
+                }
+            }   
+            
+        }
+        .descripcion-bio{
+            @extend %pad-wid;
+            @include text ($font-primaria, 1.1rem, $color-terciario,justify);      
+            @extend %border;
+            .nombre{    
+                @include text ($font-secundaria, 2rem, $color-terciario, center);
+                margin-bottom: 2rem;
+            }            
+            .ultimo-parrafo{
+                margin-bottom: 0;
+            }
+            .img-bio{                
+                transform: translate(4rem, -4.2rem);                    
+                @extend %shadow;
+            }     
+        } 
+        .descripcion-pendulo{
+            @extend %pad-wid;
+            @include text ($font-primaria, 1.1rem, $color-terciario,justify);    
+            @extend %border;
+            .nombre{    
+                @include text ($font-secundaria, 2rem, $color-terciario, center);
+                margin-bottom: 2rem;
+            }            
+            .ultimo-parrafo{
+                margin-bottom: 0;
+            }
+            .img-pendulo{
+                margin-top: 5rem;
+                margin-left: 3rem;
+                box-shadow: 4px 4px 15px;                
+            }      
+        }  
+    }
+}

@@ -1,0 +1,19 @@
+%flex-simple {
+    display: flex;
+    flex-direction: column;
+}
+
+%border {
+    border-style: solid;
+    border-color: $color-terciario;
+}
+
+%shadow {
+    filter: drop-shadow(5px 5px 8px);
+}
+
+%pad-wid{
+    width: 32rem;
+    height: 52rem;
+    padding: 1rem 1rem 0 1rem; 
+}

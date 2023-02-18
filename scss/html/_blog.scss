@@ -1,0 +1,41 @@
+//import
+@import "../base/variables"; 
+@import "../base/extend";
+@import "../base/mixin";
+
+/*blog*/
+main{
+    .blog-titulo{
+        @include text ($font-secundaria, 2.2rem, $color-terciario, center);
+    }
+    .contain{
+        @include flex (6rem);
+        margin: 8rem;
+        .contain-blog{
+            width: 25.4rem;
+            @extend %border;        
+            .titulo-articulo{
+                padding: 3rem 4rem 0 4rem; 
+                @include text ($font-primaria, 1.5rem, $color-terciario, center);
+            }
+            .articulo{
+                padding: 2rem;
+                @include text ($font-primaria, 1rem, black, justify);
+            }
+            .vermas-blog{
+                text-decoration-color: black;
+                @include text ($font-terciaria, 1rem, black,  end);
+                text-overflow: none;
+                padding: 1rem 2rem 2rem 2rem;
+                transition: 0.3s;
+            }      
+            .vermas-blog:hover{
+                text-decoration-color: $color-terciario;
+                color: $color-terciario;
+            }
+            .vermas-blog:active{
+                transform: scale(0.9);
+            }
+        }
+    }
+}
